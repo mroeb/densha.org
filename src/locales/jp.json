@@ -797,26 +797,8 @@
 			"name": "Shining Stage",
 			"description": "「Densha de D: Shining Stage（電車D シャイニングステージ）」は、Densha de Dシリーズの第5作目です。人気漫画『頭文字D』をパロディ化した電車レースゲームです。",
 			"characters": [
-				{
-					"name": "icon_86",
-					"alias": "",
-					"description": 
-					[
-						"",
-						"<br>"
-					]
-				}
 			],
 			"trains":[
-				{
-					"name": "86",
-					"alias": "",
-					"description": 
-					[
-						"",
-						"<br>"
-					]
-				}
 			]
 		},
 
@@ -824,26 +806,8 @@
 			"name": "In Development",
 			"description": "新しい「Densha de D」ゲームが開発中です！リリース日についてはまだ不明です。",
 			"characters": [
-				{
-					"name": "icon_86",
-					"alias": "",
-					"description": 
-					[
-						"",
-						"<br>"
-					]
-				}
 			],
 			"trains":[
-				{
-					"name": "86",
-					"alias": "",
-					"description": 
-					[
-						"",
-						"<br>"
-					]
-				}
 			]
 		}
 	}

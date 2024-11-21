@@ -59,13 +59,13 @@
         <div v-if="game.guides.length" class="text-center">
           <div v-for="(guide, index) in game.guides" :key="index" class="d-flex justify-center">
             
-            <div style="width: 100%; height: 100%;">
-              <iframe style="width: 100%; height: 100%;" :src="guide.link" title="Densha de D: Lightning Stage - How to beat Keisuke" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div style="width: 33%;">
+              <iframe style="width: 20vw; height: 33vh;" :src="guide.link" title="Densha de D: Lightning Stage - How to beat Keisuke" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             
             <div>
               <h2 style="margin: 1rem 1rem 1rem 1rem;">{{ guide.title }}</h2>
-              <div v-for="(desc, index) in guide.description" :key="index" v-html="desc" style="margin: 1rem 1rem 1rem 1rem; text-align: left;"></div>
+              <div v-for="(desc, index) in guide.description" :key="index" v-html="desc" style="margin: 1rem 1rem 1rem 1rem; text-align: left; width: 66%;"></div>
             </div>
 
           </div>
@@ -163,6 +163,8 @@ export default {
         this.game.trains = gameData.trains || [];
         this.game.guides = gameData.guides || [];
         this.game.speedrunning = gameData.speedrunning || [];
+
+
       }
     },
     buyGameDialog() {

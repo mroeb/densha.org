@@ -1,6 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <v-app-bar dark>
+  <v-app-bar dark >
+
     <v-img src = "/src/assets/DDD_Logo.png" max-height="50" max-width="150" />
     <v-btn @click="$router.push('/')">
       <v-icon start icon="fas fa-home"></v-icon>
@@ -17,7 +18,7 @@
         <v-list-item
           v-for="game in games"
           :key="game.name"
-          @click="$router.push(game.route)"
+          @click="$router.push(`/${game.route}`)"
         >
           <v-list-item-title>{{ game.name }}</v-list-item-title>
         </v-list-item>
@@ -32,11 +33,11 @@
       </template>
       <v-list>
         <v-list-item
-          v-for="site in buyGames"
-          :key="site.name"
-          @click="confirmNavigation(site.link)"
+          v-for="game in games"
+          :key="game.name"
+          @click="confirmNavigation(game.ostLink)"
         >
-          <v-list-item-title>{{ site.name }}</v-list-item-title>
+          <v-list-item-title>{{ game.name }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -49,11 +50,11 @@
       </template>
       <v-list>
         <v-list-item
-          v-for="site in buyOst"
-          :key="site.name"
-          @click="confirmNavigation(site.link)"
+          v-for="game in games"
+          :key="game.name"
+          @click="confirmNavigation(game.ostLink)"
         >
-          <v-list-item-title>{{ site.name }}</v-list-item-title>
+          <v-list-item-title>{{ game.name }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -78,9 +79,6 @@
         <v-list-item v-for="lang in languages" :key="lang.code" @click="changeLanguage(lang.code)">
           {{ lang.name }}
         </v-list-item>
-<!-- 
-        <v-list-item @click="changeLanguage('en')">🇬🇧 English</v-list-item>
-        <v-list-item @click="changeLanguage('jp')">🇯🇵 Japanese</v-list-item> -->
       </v-list>
     </v-menu>
 
@@ -104,38 +102,24 @@
 
 import variables from "@/locales/variables.json";
 
+
 export default {
   data() {
     return {
       currentIcon: "fas fa-home",
-      games: [
-        { name: "Lightning Stage", route: "/games/lightning" },
-        { name: "Burning Stage", route: "/games/burning" },
-        { name: "Climax Stage", route: "/games/climax" },
-        { name: "Rising Stage", route: "/games/rising" },
-        { name: "Shining Stage", route: "/games/shining" },
-        { name: "In Development Stage", route: "/games/dev" },
-      ],
-      buyGames: [
-        { name: "Lightning Stage", link: "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ217271.html/?locale=en_US" },
-        { name: "Burning Stage", link: "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ227913.html/?locale=en_US" },
-        { name: "Climax Stage", link: "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ242866.html/?locale=en_US" },
-        { name: "Rising Stage", link: "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ242921.html/?locale=en_US" },
-        { name: "Shining Stage", link: "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ293227.html/?locale=en_US" },
-      ],
-      buyOst: [
-        { name: "Lightning Stage", link: "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ217287.html/?locale=en_US" },
-        { name: "Burning Stage", link: "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ227915.html/?locale=en_US" },
-        { name: "Climax Stage", link: "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ242869.html/?locale=en_US" },
-        { name: "Rising Stage", link: "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ242924.html/?locale=en_US" },
-        { name: "Shining Stage", link: "https://www.youtube.com/watch?v=fJqgXqwIlMs" },
-      ],
+
+      games: variables.games,
 
       languages: variables.languages,
 
       dialog: false,
       externalLink: "",
     };
+  },
+  computed: {
+    slug() {
+      return this.$route.params.slug;
+    },
   },
   watch: {
     $route: {
@@ -171,3 +155,17 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+
+  @media (max-width: 600px) {
+    .v-btn {
+      font-size: 12px;
+    }
+    .v-icon 
+    {
+      font-size: 16px;
+    }
+  }
+
+</style>

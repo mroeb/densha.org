@@ -4,6 +4,7 @@
       <v-main>
         <router-view />
       </v-main>
+
   </v-app>
 </template>
 
@@ -13,6 +14,6 @@ import Navbar from './components/Navbar.vue'
 export default {
   components: {
     Navbar
-  }
+  },
 }
 </script>

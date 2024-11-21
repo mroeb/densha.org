@@ -5,35 +5,41 @@
             "name": "Lightning Stage",
             "gameLink": "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ217271.html/?locale=en_US",
             "ostLink": "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ217287.html/?locale=en_US",
-            "color": "#e40113"
+            "color": "#e40113",
+            "route": "games/lightning"
         },
         {
             "name": "Burning Stage",
             "gameLink": "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ227913.html/?locale=en_US",
             "ostLink": "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ227915.html/?locale=en_US",
-            "color": "#0180cd"
+            "color": "#0180cd",
+            "route": "games/burning"
         },
         {
             "name": "Climax Stage",
             "gameLink": "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ242866.html/?locale=en_US",
             "ostLink": "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ242869.html/?locale=en_US",
-            "color": "#a3cd13"
+            "color": "#a3cd13",
+            "route": "games/climax"
         },
         {
             "name": "Rising Stage",
             "gameLink": "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ242921.html/?locale=en_US",
             "ostLink": "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ242924.html/?locale=en_US",
-            "color": "#f16621"
+            "color": "#f16621",
+            "route": "games/rising"
         },
         {
             "name": "Shining Stage",
             "gameLink": "https://www.dlsite.com/home/dlaf/=/t/s/link/work/aid/DenshaOrg/locale/en_US/id/RJ293227.html/?locale=en_US",
             "ostLink": "https://www.youtube.com/watch?v=fJqgXqwIlMs",
-            "color": "#801189"
+            "color": "#801189",
+            "route": "games/shining"
         },
         {
             "name": "In Developement",
-            "color": "#FFFFFF"
+            "color": "#FFFFFF",
+            "route": "games/dev"
         }
     ],
     "languages": [
